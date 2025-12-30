@@ -19,7 +19,7 @@ public class SucursalService {
         var franquicia = franquiciaRepository.findById(franquiciaId)
                 .orElseThrow(() -> new IllegalArgumentException("La franquicia no existe"));
 
-        if (sucursalRepository.existByNombreAndFranquiciaId(nombreSucursal, franquiciaId)) {
+        if (sucursalRepository.existsByNombreAndFranquiciaId(nombreSucursal, franquiciaId)) {
             throw new IllegalArgumentException("La sucursal ya existe en la franquicia");
         }
 

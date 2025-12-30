@@ -15,9 +15,9 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
     Optional<Producto> findByNombreAndSucursalId(String nombre, Long sucursalId);
 
     @Query("""
-            SELECT p FROM producto p WHERE p.sucursal.id = :sucursalId
+            SELECT p FROM Producto p WHERE p.sucursal.id = :sucursalId
                AND p.stock = (
-               SELECT MAX(p2.stock) FROM producto p2
+               SELECT MAX(p2.stock) FROM Producto p2
                WHERE p2.sucursal.id = :sucursalId
                )
             """)

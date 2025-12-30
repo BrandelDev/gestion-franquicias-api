@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 
@@ -27,7 +28,7 @@ public class Franquicia {
     private LocalDateTime created_at;
 
     @OneToMany(mappedBy = "franquicia", cascade = CascadeType.ALL, orphanRemoval = true)
-
+    @JsonManagedReference
     private List<Sucursal> sucursales;
 
     @PrePersist

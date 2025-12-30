@@ -31,7 +31,7 @@ public class ProductoService {
                 .orElseThrow(() -> new IllegalArgumentException("La sucursal no existe"));
 
         if (productoRepository.existsByNombreAndSucursalId(nombre, sucursalId)) {
-            throw new IllegalArgumentException("El producot ya existe en la sucursal");
+            throw new IllegalArgumentException("El producto ya existe en la sucursal");
         }
 
         Producto producto = Producto.builder()
@@ -39,6 +39,7 @@ public class ProductoService {
                 .stock(stock)
                 .sucursal(sucursal)
                 .build();
+                
         return productoRepository.save(producto);
     }
 

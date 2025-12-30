@@ -13,6 +13,6 @@ public interface SucursalRepository extends JpaRepository<Sucursal, Long> {
 
     Optional<Sucursal> findByNombreAndFranquiciaId(String nombre, Long franquiciaId);
 
-    boolean existByNombreAndFranquiciaId(String nombre, Long franquiciaId);
+    boolean existsByNombreAndFranquiciaId(String nombre, Long franquiciaId);
 
 }

@@ -1,8 +1,0 @@
-target
-.git
-.gitignore
-.gitattributes
-.mvn
-.vscode
-.idea
-*.iml

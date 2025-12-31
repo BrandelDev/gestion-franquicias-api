@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.franquicias.gestionfranquicias.dto.response.ProductoMayorStockResponse;
-import com.example.franquicias.gestionfranquicias.model.Franquicia;
 import com.example.franquicias.gestionfranquicias.model.Producto;
 import com.example.franquicias.gestionfranquicias.model.Sucursal;
 import com.example.franquicias.gestionfranquicias.repository.ProductoRepository;

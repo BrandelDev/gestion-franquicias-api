@@ -2,7 +2,6 @@ package com.example.franquicias.gestionfranquicias.controller;
 
 import java.util.List;
 
-import org.hibernate.annotations.Parameter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
